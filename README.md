@@ -62,20 +62,13 @@ Note: this script does not save video.
 Please view that issue [here](https://github.com/yeephycho/tensorflow-face-detection/issues/5) if your output video is blank. A brief reminder is: check the input codec and check the input/output resolution, since this part is irrelevant to the algorithm, no modification will be made to master branch.
 
 ### MY CONTRIBUTE
-This can be use on MACOS，which is use for “上班摸fish”, When detected there's two people in front of the screen, it will click the position you want on screen to switch between applications, the code ***bash pyautogui.moveTo(54,36)*** should be adjust depend on the position of full screen button. 
+This can be use on MACOS，which is use for “上班摸fish”. When detected there's two people in front of the screen, it will click the full screen button on PyCharm, then you will be safe :) the code ***bash pyautogui.moveTo(54,36)*** should be adjust depend on the position of yout full screen button. 
+
 Then run: 
 
 ```bash
 python inference_usbCam_face.py 0
 ```
-
-### Further
-The model released by this repo. has already been merged into Deep Video Analytics / Visual Data Network.
-
-Please click the following link for more applications.
-
-[1] https://www.deepvideoanalytics.com
-[2] https://github.com/VisualDataNetwork/root
 
 ## License
 Usage of the code and model by yeephycho is under the license of Apache 2.0.
