@@ -8,9 +8,10 @@ import time
 import numpy as np
 import tensorflow as tf
 import cv2
-
+import os
 from utils import label_map_util
 from utils import visualization_utils_color as vis_util
+import pyautogui
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = './model/frozen_inference_graph_face.pb'
@@ -101,6 +102,11 @@ if __name__ == "__main__":
         image = cv2.flip(image, 1)
 
         (boxes, scores, classes, num_detections) = tDetector.run(image)
+        print('how about this time...', len(np.where(scores > 0.7)[0]))
+        if (len(np.where(scores > 0.7)[0]) >= 2):
+            pyautogui.moveTo(54,36)
+            pyautogui.doubleClick()
+            break
 
         vis_util.visualize_boxes_and_labels_on_image_array(
             image,

@@ -80,10 +80,7 @@ with detection_graph.as_default():
           feed_dict={image_tensor: image_np_expanded})
       elapsed_time = time.time() - start_time
       print('inference time cost: {}'.format(elapsed_time))
-      #print(boxes.shape, boxes)
-      #print(scores.shape,scores)
-      #print(classes.shape,classes)
-      #print(num_detections)
+
       # Visualization of the results of a detection.
       vis_util.visualize_boxes_and_labels_on_image_array(
 #          image_np,

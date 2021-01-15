@@ -95,7 +95,7 @@ def draw_bounding_box_on_image_array(image,
                                      color='red',
                                      thickness=4,
                                      display_str_list=(),
-                                     use_normalized_coordinates=True):
+                                     use_normalized_coordinates=False):
   """Adds a bounding box to an image (numpy array).
 
   Args:
@@ -370,9 +370,12 @@ def visualize_boxes_and_labels_on_image_array(image,
   box_to_keypoints_map = collections.defaultdict(list)
   if not max_boxes_to_draw:
     max_boxes_to_draw = boxes.shape[0]
+
   for i in range(min(max_boxes_to_draw, boxes.shape[0])):
+
     if scores is None or scores[i] > min_score_thresh:
       box = tuple(boxes[i].tolist())
+
       if instance_masks is not None:
         box_to_instance_masks_map[box] = instance_masks[i]
       if keypoints is not None:
