@@ -1,4 +1,4 @@
-# Tensorflow Face Detector
+# Tensorflow Face Detector-- MO YU 改装版
 A mobilenet SSD(single shot multibox detector) based face detector with pretrained model provided, powered by tensorflow [object detection api](https://github.com/tensorflow/models/tree/master/research/object_detection), trained by [WIDERFACE dataset](http://shuoyang1213.me/WIDERFACE/).
 
 ## Features
@@ -62,7 +62,7 @@ Note: this script does not save video.
 Please view that issue [here](https://github.com/yeephycho/tensorflow-face-detection/issues/5) if your output video is blank. A brief reminder is: check the input codec and check the input/output resolution, since this part is irrelevant to the algorithm, no modification will be made to master branch.
 
 ### MY CONTRIBUTE
-This can be use on MACOS，which is use for “上班摸fish”. When detected there's two people in front of the screen, it will click the full screen button on PyCharm, then you will be safe :) the code ***bash pyautogui.moveTo(54,36)*** should be adjust depend on the position of yout full screen button. 
+This can be use on MACOS，which is used for “上班摸fish”. When detectes there's two people in front of the screen, it will click the full screen button on PyCharm, then you will be safe :) the code ***bash pyautogui.moveTo(54,36)*** should be adjust depend on the position of yout full screen button. 
 
 Then run: 
 
